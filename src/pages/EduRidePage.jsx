@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
   GraduationCap, 
   ShieldCheck, 
@@ -49,52 +50,71 @@ export default function EduRidePage({ onOpenDemo }) {
             <span style={{ color: '#ffffff' }}>EduRide School Transit</span>
           </div>
 
-          <div style={{ maxWidth: '820px' }}>
-            <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              background: 'rgba(56, 189, 248, 0.15)',
-              border: '1px solid rgba(56, 189, 248, 0.35)',
-              borderRadius: '9999px',
-              padding: '6px 14px',
-              fontSize: '12px',
-              fontWeight: '900',
-              color: '#38bdf8',
-              marginBottom: '20px'
-            }}>
+          <div style={{ maxWidth: '840px' }}>
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'rgba(56, 189, 248, 0.15)',
+                border: '1px solid rgba(56, 189, 248, 0.35)',
+                borderRadius: '9999px',
+                padding: '6px 14px',
+                fontSize: '12px',
+                fontWeight: '900',
+                color: '#38bdf8',
+                marginBottom: '20px'
+              }}
+            >
               <GraduationCap size={14} /> CAMPUS MOBILITY & STUDENT SAFETY OS
-            </div>
+            </motion.div>
 
-            <h1 style={{
-              fontSize: 'clamp(32px, 5vw, 54px)',
-              fontWeight: '950',
-              fontFamily: 'var(--font-heading)',
-              lineHeight: 1.15,
-              color: '#ffffff',
-              marginBottom: '20px',
-              letterSpacing: '-1px'
-            }}>
+            <motion.h1 
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              style={{
+                fontSize: 'clamp(32px, 5vw, 54px)',
+                fontWeight: '950',
+                fontFamily: 'var(--font-heading)',
+                lineHeight: 1.15,
+                color: '#ffffff',
+                marginBottom: '20px',
+                letterSpacing: '-1px'
+              }}
+            >
               Zero-Compromise <span style={{ color: '#38bdf8' }}>Student Safety</span> & School Bus Telemetry
-            </h1>
+            </motion.h1>
 
-            <p style={{
-              fontSize: '18px',
-              lineHeight: 1.65,
-              color: 'rgba(255, 255, 255, 0.75)',
-              marginBottom: '32px'
-            }}>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              style={{
+                fontSize: '18px',
+                lineHeight: 1.65,
+                color: 'rgba(255, 255, 255, 0.75)',
+                marginBottom: '32px'
+              }}
+            >
               Smart RFID tap cards, instant WhatsApp alerts for parents, speed governor enforcement, and AI campus route optimization. Trusted by over 450+ educational institutions across India.
-            </p>
+            </motion.p>
 
-            <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+            <motion.div 
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}
+            >
               <button onClick={onOpenDemo} className="btn-primary-glow" style={{ padding: '14px 28px', fontSize: '15px' }}>
                 <Sparkles size={16} /> Request School Demo & Pilot
               </button>
               <a href="https://logkaro.com/login" target="_blank" rel="noreferrer" className="btn-secondary-glow" style={{ padding: '14px 24px', fontSize: '15px', textDecoration: 'none' }}>
                 Principal & Transport Login
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -127,9 +147,9 @@ export default function EduRidePage({ onOpenDemo }) {
         </div>
       </section>
 
-      {/* FEATURE 1: RFID Tap Card & Instant WhatsApp with Photo */}
+      {/* FEATURE 1: RFID Tap Card & Real Smartphone WhatsApp Alert Mockup */}
       <section style={{ maxWidth: '1240px', margin: '80px auto', padding: '0 24px' }}>
-        <div className="feature-split-grid">
+        <div className="feature-split-grid" style={{ gridTemplateColumns: '1fr 0.9fr' }}>
           <div style={{ textAlign: 'left' }}>
             <div style={{
               display: 'inline-flex',
@@ -171,23 +191,39 @@ export default function EduRidePage({ onOpenDemo }) {
             </button>
           </div>
 
-          <div className="photo-frame" style={{ height: '420px' }}>
-            <img src="/images/school_bus_students.jpg" alt="Students boarding school bus" />
-            <div className="photo-overlay-gradient" />
-            <div className="photo-floating-badge">
-              <div>
-                <div style={{ fontSize: '12px', fontWeight: '900', color: '#38bdf8' }}>SMART STUDENT RFID TAP</div>
-                <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.7)' }}>Aarav S. boarded Bus #14 • Sector 62 Stop</div>
-              </div>
-              <span style={{ background: '#10b981', color: '#000000', padding: '3px 8px', borderRadius: '4px', fontSize: '10px', fontWeight: '900' }}>
-                WHATSAPP SENT
-              </span>
+          {/* Smartphone WhatsApp Alert Vector Mockup */}
+          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ maxWidth: '340px', width: '100%' }}>
+              <img src="/images/mockups/parent_whatsapp_alert.svg" alt="LogKaro School Bus Parent WhatsApp Alert Mockup" style={{ width: '100%', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.7))' }} />
             </div>
+
+            <motion.div 
+              animate={{ y: [0, -8, 0] }}
+              transition={{ repeat: Infinity, duration: 3.8, ease: 'easeInOut' }}
+              style={{
+                position: 'absolute',
+                top: '40px',
+                right: '-10px',
+                background: 'rgba(3,6,17,0.92)',
+                border: '1px solid rgba(56,189,248,0.5)',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.6), 0 0 15px rgba(56,189,248,0.3)',
+                borderRadius: '8px',
+                padding: '8px 14px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                zIndex: 10
+              }}
+            >
+              <span style={{ fontSize: '12px' }}>📱</span>
+              <span style={{ fontSize: '11px', fontWeight: '900', color: '#38bdf8' }}>WhatsApp Alert Sent: 07:42 AM</span>
+              <span style={{ background: '#25d366', color: '#000', fontSize: '9px', fontWeight: '900', padding: '2px 5px', borderRadius: '4px' }}>DELIVERED</span>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* FEATURE 2: Campus Geofencing & Speed Governor */}
+      {/* FEATURE 2: Campus Geofencing & Speed Governor with Real Photo */}
       <section style={{ maxWidth: '1240px', margin: '80px auto', padding: '0 24px' }}>
         <div className="feature-split-grid" style={{ gridTemplateColumns: '0.95fr 1.05fr' }}>
           <div className="photo-frame" style={{ height: '420px' }}>

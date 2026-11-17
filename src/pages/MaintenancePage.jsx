@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
   Wrench, 
   CircleDashed, 
@@ -45,59 +46,108 @@ export default function MaintenancePage({ onOpenDemo }) {
             <span style={{ color: '#ffffff' }}>Fleet Maintenance & Tyres</span>
           </div>
 
-          <div style={{ maxWidth: '820px' }}>
-            <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              background: 'rgba(16, 185, 129, 0.15)',
-              border: '1px solid rgba(16, 185, 129, 0.35)',
-              borderRadius: '9999px',
-              padding: '6px 14px',
-              fontSize: '12px',
-              fontWeight: '900',
-              color: '#34d399',
-              marginBottom: '20px'
-            }}>
+          <div style={{ maxWidth: '840px' }}>
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'rgba(16, 185, 129, 0.15)',
+                border: '1px solid rgba(16, 185, 129, 0.35)',
+                borderRadius: '9999px',
+                padding: '6px 14px',
+                fontSize: '12px',
+                fontWeight: '900',
+                color: '#34d399',
+                marginBottom: '20px'
+              }}
+            >
               <Wrench size={14} /> FLEET HEALTH & WORKSHOP AUDIT OS
-            </div>
+            </motion.div>
 
-            <h1 style={{
-              fontSize: 'clamp(32px, 5vw, 54px)',
-              fontWeight: '950',
-              fontFamily: 'var(--font-heading)',
-              lineHeight: 1.15,
-              color: '#ffffff',
-              marginBottom: '20px',
-              letterSpacing: '-1px'
-            }}>
+            <motion.h1 
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              style={{
+                fontSize: 'clamp(32px, 5vw, 54px)',
+                fontWeight: '950',
+                fontFamily: 'var(--font-heading)',
+                lineHeight: 1.15,
+                color: '#ffffff',
+                marginBottom: '20px',
+                letterSpacing: '-1px'
+              }}
+            >
               Autonomous <span style={{ color: '#34d399' }}>Tyre Wear Monitoring</span> & Garage Settlement
-            </h1>
+            </motion.h1>
 
-            <p style={{
-              fontSize: '18px',
-              lineHeight: 1.65,
-              color: 'rgba(255, 255, 255, 0.75)',
-              marginBottom: '32px'
-            }}>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              style={{
+                fontSize: '18px',
+                lineHeight: 1.65,
+                color: 'rgba(255, 255, 255, 0.75)',
+                marginBottom: '32px'
+              }}
+            >
               Never get overcharged for tyres or vehicle servicing again. Track 4-wheel wear lifecycles, detect duplicate maintenance claims, and settle verified vendor invoices with 1-click bank payouts.
-            </p>
+            </motion.p>
 
-            <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+            <motion.div 
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}
+            >
               <button onClick={onOpenDemo} className="btn-primary-glow" style={{ padding: '14px 28px', fontSize: '15px' }}>
                 <Sparkles size={16} /> Schedule Maintenance Demo
               </button>
               <a href="https://logkaro.com/login" target="_blank" rel="noreferrer" className="btn-secondary-glow" style={{ padding: '14px 24px', fontSize: '15px', textDecoration: 'none' }}>
                 Workshop & Garage Portal
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Feature Split: Tyre Service & Garage Photo */}
+      {/* Feature Split: Chassis Tyre Radar Vector Mockup */}
       <section style={{ maxWidth: '1240px', margin: '80px auto', padding: '0 24px' }}>
-        <div className="feature-split-grid">
+        <div className="feature-split-grid" style={{ gridTemplateColumns: '1.1fr 0.9fr' }}>
+          {/* Chassis Radar Vector Mockup */}
+          <div style={{ position: 'relative' }}>
+            <div className="photo-frame" style={{ height: '390px', background: '#060a19' }}>
+              <img src="/images/mockups/tyre_wear_radar.svg" alt="4-Wheel Tyre Wear Lifecycle Radar Mockup" style={{ objectFit: 'contain' }} />
+            </div>
+
+            <motion.div 
+              animate={{ y: [0, -8, 0] }}
+              transition={{ repeat: Infinity, duration: 3.5, ease: 'easeInOut' }}
+              style={{
+                position: 'absolute',
+                top: '-14px',
+                left: '16px',
+                background: 'rgba(3,6,17,0.92)',
+                border: '1px solid rgba(16,185,129,0.5)',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.6), 0 0 15px rgba(16,185,129,0.3)',
+                borderRadius: '8px',
+                padding: '8px 14px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                zIndex: 10
+              }}
+            >
+              <span style={{ fontSize: '12px' }}>🔧</span>
+              <span style={{ fontSize: '11px', fontWeight: '900', color: '#34d399' }}>1-Click Bank Payout: HDFC Settled</span>
+              <span style={{ background: '#10b981', color: '#000', fontSize: '9px', fontWeight: '900', padding: '2px 5px', borderRadius: '4px' }}>AUDITED</span>
+            </motion.div>
+          </div>
+
           <div style={{ textAlign: 'left' }}>
             <div style={{
               display: 'inline-flex',
@@ -137,20 +187,6 @@ export default function MaintenancePage({ onOpenDemo }) {
             <button onClick={onOpenDemo} className="btn-primary-glow" style={{ padding: '12px 22px', fontSize: '13.5px' }}>
               See Tyre Radar Live <ArrowRight size={14} />
             </button>
-          </div>
-
-          <div className="photo-frame" style={{ height: '420px' }}>
-            <img src="/images/tyre_wheel_service.jpg" alt="Fleet Tyre Wheel Maintenance" />
-            <div className="photo-overlay-gradient" />
-            <div className="photo-floating-badge">
-              <div>
-                <div style={{ fontSize: '12px', fontWeight: '900', color: '#34d399' }}>RADIAL WEAR RADAR</div>
-                <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.7)' }}>Innova Crysta • Front Left: 82% Life Remaining</div>
-              </div>
-              <span style={{ background: '#10b981', color: '#000000', padding: '3px 8px', borderRadius: '4px', fontSize: '10px', fontWeight: '900' }}>
-                HEALTHY
-              </span>
-            </div>
           </div>
         </div>
       </section>

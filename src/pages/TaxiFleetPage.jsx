@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
   Car, 
   Fuel, 
@@ -10,10 +11,11 @@ import {
   Sparkles, 
   Clock, 
   MapPin, 
-  PhoneCall, 
-  FileText,
-  DollarSign,
-  ChevronRight
+  Smartphone,
+  ChevronRight,
+  TrendingUp,
+  CreditCard,
+  Zap
 } from 'lucide-react';
 import RoiCalculator from '../components/RoiCalculator';
 
@@ -29,7 +31,6 @@ export default function TaxiFleetPage({ onOpenDemo }) {
         overflow: 'hidden',
         borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
       }}>
-        {/* Background photo with cyber gradient overlay */}
         <div style={{
           position: 'absolute',
           inset: 0,
@@ -55,52 +56,71 @@ export default function TaxiFleetPage({ onOpenDemo }) {
             <span style={{ color: '#ffffff' }}>Commercial Taxi Fleet OS</span>
           </div>
 
-          <div style={{ maxWidth: '820px' }}>
-            <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              background: 'rgba(245, 158, 11, 0.15)',
-              border: '1px solid rgba(245, 158, 11, 0.35)',
-              borderRadius: '9999px',
-              padding: '6px 14px',
-              fontSize: '12px',
-              fontWeight: '900',
-              color: '#fbbf24',
-              marginBottom: '20px'
-            }}>
+          <div style={{ maxWidth: '840px' }}>
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'rgba(245, 158, 11, 0.15)',
+                border: '1px solid rgba(245, 158, 11, 0.35)',
+                borderRadius: '9999px',
+                padding: '6px 14px',
+                fontSize: '12px',
+                fontWeight: '900',
+                color: '#fbbf24',
+                marginBottom: '20px'
+              }}
+            >
               <Car size={14} /> FLAGSHIP COMMERCIAL FLEET PLATFORM
-            </div>
+            </motion.div>
 
-            <h1 style={{
-              fontSize: 'clamp(32px, 5vw, 54px)',
-              fontWeight: '950',
-              fontFamily: 'var(--font-heading)',
-              lineHeight: 1.15,
-              color: '#ffffff',
-              marginBottom: '20px',
-              letterSpacing: '-1px'
-            }}>
+            <motion.h1 
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              style={{
+                fontSize: 'clamp(32px, 5vw, 54px)',
+                fontWeight: '950',
+                fontFamily: 'var(--font-heading)',
+                lineHeight: 1.15,
+                color: '#ffffff',
+                marginBottom: '20px',
+                letterSpacing: '-1px'
+              }}
+            >
               The Operating System for <span className="text-gradient-gold">Commercial Taxi & Outstation</span> Tour Fleets
-            </h1>
+            </motion.h1>
 
-            <p style={{
-              fontSize: '18px',
-              lineHeight: 1.65,
-              color: 'rgba(255, 255, 255, 0.75)',
-              marginBottom: '32px'
-            }}>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              style={{
+                fontSize: '18px',
+                lineHeight: 1.65,
+                color: 'rgba(255, 255, 255, 0.75)',
+                marginBottom: '32px'
+              }}
+            >
               End spreadsheet chaos, eliminate driver cash disputes, and reconcile guest fuel pump receipts directly into trip ledgers. Built specifically for India’s premium travel and transport operators.
-            </p>
+            </motion.p>
 
-            <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+            <motion.div 
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}
+            >
               <button onClick={onOpenDemo} className="btn-primary-glow" style={{ padding: '14px 28px', fontSize: '15px' }}>
                 <Sparkles size={16} /> Schedule 1-on-1 Fleet Demo
               </button>
               <a href="https://logkaro.com/login" target="_blank" rel="noreferrer" className="btn-secondary-glow" style={{ padding: '14px 24px', fontSize: '15px', textDecoration: 'none' }}>
                 Sign In to Operator Portal
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -133,7 +153,7 @@ export default function TaxiFleetPage({ onOpenDemo }) {
         </div>
       </section>
 
-      {/* FEATURE DEEP-DIVE 1: Live DRS Dispatch with Real Photography */}
+      {/* FEATURE DEEP-DIVE 1: Live DRS Dispatch with Cockpit Vector Mockup */}
       <section style={{ maxWidth: '1240px', margin: '80px auto', padding: '0 24px' }}>
         <div className="feature-split-grid">
           {/* Left Column: Text & Features */}
@@ -184,39 +204,70 @@ export default function TaxiFleetPage({ onOpenDemo }) {
             </button>
           </div>
 
-          {/* Right Column: Real Photo Frame */}
-          <div className="photo-frame" style={{ height: '420px' }}>
-            <img src="/images/chauffeur_highway.jpg" alt="Commercial Highway Chauffeur" />
-            <div className="photo-overlay-gradient" />
-            <div className="photo-floating-badge">
-              <div>
-                <div style={{ fontSize: '12px', fontWeight: '900', color: '#fbbf24' }}>LIVE ON-ROUTE TELEMETRY</div>
-                <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.7)' }}>GPS & Odometer Tracked Across 28+ States</div>
-              </div>
-              <span style={{ background: '#10b981', color: '#000000', padding: '3px 8px', borderRadius: '4px', fontSize: '10px', fontWeight: '900' }}>
-                ACTIVE
-              </span>
+          {/* Right Column: High-Fidelity Vector Cockpit Mockup */}
+          <div style={{ position: 'relative' }}>
+            <div className="photo-frame" style={{ height: '390px', background: '#060a19' }}>
+              <img src="/images/mockups/drs_dispatch_cockpit.svg" alt="Live DRS Dispatch Command Center Mockup" style={{ objectFit: 'contain' }} />
             </div>
+            {/* Animated Floating Pill */}
+            <motion.div 
+              animate={{ y: [0, -8, 0] }}
+              transition={{ repeat: Infinity, duration: 3.5, ease: 'easeInOut' }}
+              style={{
+                position: 'absolute',
+                top: '-14px',
+                right: '16px',
+                background: 'rgba(3,6,17,0.92)',
+                border: '1px solid rgba(245,158,11,0.5)',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.6), 0 0 15px rgba(245,158,11,0.3)',
+                borderRadius: '8px',
+                padding: '8px 14px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                zIndex: 10
+              }}
+            >
+              <span style={{ fontSize: '12px' }}>🚗</span>
+              <span style={{ fontSize: '11px', fontWeight: '900', color: '#fbbf24' }}>DL-01-AB-1001: 680 KM Logged</span>
+              <span style={{ background: '#10b981', color: '#000', fontSize: '9px', fontWeight: '900', padding: '2px 5px', borderRadius: '4px' }}>LIVE GPS</span>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* FEATURE DEEP-DIVE 2: Direct Guest Fuel Netting with Interior Photo */}
+      {/* FEATURE DEEP-DIVE 2: Driver Mobile App + Direct Fuel Netting */}
       <section style={{ maxWidth: '1240px', margin: '80px auto', padding: '0 24px' }}>
-        <div className="feature-split-grid" style={{ gridTemplateColumns: '0.95fr 1.05fr' }}>
-          {/* Left Column: Real Photo Frame */}
-          <div className="photo-frame" style={{ height: '420px' }}>
-            <img src="/images/luxury_sedan_interior.jpg" alt="Luxury Sedan Guest Experience" />
-            <div className="photo-overlay-gradient" />
-            <div className="photo-floating-badge">
-              <div>
-                <div style={{ fontSize: '12px', fontWeight: '900', color: '#38bdf8' }}>EXECUTIVE GUEST EXPERIENCE</div>
-                <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.7)' }}>Seamless In-Tour Fuel Settlement</div>
-              </div>
-              <span style={{ background: 'rgba(56,189,248,0.2)', color: '#38bdf8', padding: '3px 8px', borderRadius: '4px', fontSize: '10px', fontWeight: '900' }}>
-                ZERO DISPUTES
-              </span>
+        <div className="feature-split-grid" style={{ gridTemplateColumns: '0.9fr 1.1fr' }}>
+          {/* Left Column: Driver Smartphone Vector Mockup */}
+          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ maxWidth: '340px', width: '100%' }}>
+              <img src="/images/mockups/mobile_driver_app.svg" alt="LogKaro Driver Smartphone App Mockup" style={{ width: '100%', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.7))' }} />
             </div>
+            
+            {/* Floating OCR Verified Pill */}
+            <motion.div 
+              animate={{ y: [0, 8, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+              style={{
+                position: 'absolute',
+                bottom: '80px',
+                left: '-10px',
+                background: 'rgba(3,6,17,0.92)',
+                border: '1px solid rgba(244,63,94,0.5)',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.6), 0 0 15px rgba(244,63,94,0.3)',
+                borderRadius: '8px',
+                padding: '8px 14px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                zIndex: 10
+              }}
+            >
+              <span style={{ fontSize: '12px' }}>⛽</span>
+              <span style={{ fontSize: '11px', fontWeight: '900', color: '#f43f5e' }}>Fuel Slip Netted: -₹3,500</span>
+              <span style={{ background: '#10b981', color: '#000', fontSize: '9px', fontWeight: '900', padding: '2px 5px', borderRadius: '4px' }}>OCR AUTO</span>
+            </motion.div>
           </div>
 
           {/* Right Column: Text & Fuel Ledger Simulator */}
@@ -350,7 +401,7 @@ export default function TaxiFleetPage({ onOpenDemo }) {
                 <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.7)' }}>24/7 Outstation Duty Handover</div>
               </div>
               <span style={{ background: '#a855f7', color: '#ffffff', padding: '3px 8px', borderRadius: '4px', fontSize: '10px', fontWeight: '900' }}>
-                MARGIN SECURED
+                +₹1,900 MARGIN SECURED
               </span>
             </div>
           </div>

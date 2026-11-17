@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060a19"/>
+      <stop offset="100%" stop-color="#02040b"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="1200" height="720" rx="20" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+
+  <!-- Window Header -->
+  <rect width="1200" height="54" rx="20" fill="#091124"/>
+  <rect y="34" width="1200" height="20" fill="#091124"/>
+  <circle cx="30" cy="27" r="6" fill="#ef4444"/>
+  <circle cx="50" cy="27" r="6" fill="#f59e0b"/>
+  <circle cx="70" cy="27" r="6" fill="#10b981"/>
+  
+  <rect x="105" y="14" width="280" height="26" rx="6" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="120" cy="27" r="3.5" fill="#10b981"/>
+  <text x="132" y="31" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">logkaro.cloud/command-center</text>
+  <rect x="395" y="16" width="120" height="22" rx="4" fill="rgba(16,185,129,0.15)"/>
+  <text x="405" y="31" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="800">● 28,500 FLEETS SYNCED</text>
+
+  <!-- Navigation Tab Bar in Mockup -->
+  <rect x="30" y="74" width="1140" height="48" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="35" y="78" width="180" height="40" rx="8" fill="url(#goldGrad)"/>
+  <text x="65" y="103" fill="#030611" font-family="system-ui, sans-serif" font-size="13" font-weight="900">⚡ Live DRS Dispatch</text>
+
+  <rect x="225" y="78" width="190" height="40" rx="8" fill="transparent"/>
+  <text x="250" y="103" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">⛽ Guest Fuel Deductions</text>
+
+  <rect x="425" y="78" width="180" height="40" rx="8" fill="transparent"/>
+  <text x="450" y="103" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">🎓 EduRide School Bus</text>
+
+  <rect x="615" y="78" width="180" height="40" rx="8" fill="transparent"/>
+  <text x="640" y="103" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">🔧 Garage Maintenance</text>
+
+  <!-- Sub-header KPIs -->
+  <g transform="translate(30, 142)">
+    <!-- KPI 1 -->
+    <rect width="265" height="80" rx="12" fill="rgba(245,158,11,0.06)" stroke="rgba(245,158,11,0.25)"/>
+    <text x="20" y="30" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="11" font-weight="700">TODAY'S DISPATCH VOLUME</text>
+    <text x="20" y="62" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="24" font-weight="950">₹8,37,538</text>
+    <rect x="180" y="24" width="70" height="22" rx="4" fill="rgba(245,158,11,0.2)"/>
+    <text x="188" y="39" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="10" font-weight="900">56 DUTIES</text>
+
+    <!-- KPI 2 -->
+    <rect x="290" width="265" height="80" rx="12" fill="rgba(16,185,129,0.06)" stroke="rgba(16,185,129,0.25)"/>
+    <text x="310" y="30" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="11" font-weight="700">RECONCILED GUEST BALANCES</text>
+    <text x="310" y="62" fill="#34d399" font-family="system-ui, sans-serif" font-size="24" font-weight="950">₹3,38,554</text>
+    <rect x="475" y="24" width="65" height="22" rx="4" fill="rgba(16,185,129,0.2)"/>
+    <text x="484" y="39" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="900">99.4% SETTLED</text>
+
+    <!-- KPI 3 -->
+    <rect x="580" width="265" height="80" rx="12" fill="rgba(56,189,248,0.06)" stroke="rgba(56,189,248,0.25)"/>
+    <text x="600" y="30" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="11" font-weight="700">FUEL SLIPS NETTED</text>
+    <text x="600" y="62" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="24" font-weight="950">-₹64,280</text>
+    <text x="740" y="60" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="11">18 PUMP SLIPS</text>
+
+    <!-- KPI 4 -->
+    <rect x="870" width="270" height="80" rx="12" fill="rgba(168,85,247,0.06)" stroke="rgba(168,85,247,0.25)"/>
+    <text x="890" y="30" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="11" font-weight="700">PARTNER EXCHANGE MARGIN</text>
+    <text x="890" y="62" fill="#c084fc" font-family="system-ui, sans-serif" font-size="24" font-weight="950">+₹24,700</text>
+    <rect x="1055" y="24" width="70" height="22" rx="4" fill="rgba(168,85,247,0.25)"/>
+    <text x="1063" y="39" fill="#c084fc" font-family="system-ui, sans-serif" font-size="10" font-weight="900">9 VENDORS</text>
+  </g>
+
+  <!-- Live Table Header -->
+  <g transform="translate(30, 245)">
+    <rect width="1140" height="40" rx="8" fill="rgba(255,255,255,0.05)"/>
+    <text x="20" y="25" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="800">DUTY ID &amp; CLIENT</text>
+    <text x="240" y="25" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="800">VEHICLE &amp; MODEL</text>
+    <text x="440" y="25" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="800">TOUR ITINERARY</text>
+    <text x="680" y="25" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="800">DRIVER (GPS)</text>
+    <text x="840" y="25" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="end">TOTAL FARE</text>
+    <text x="980" y="25" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="end">BALANCE DUE</text>
+    <text x="1070" y="25" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">STATUS</text>
+  </g>
+
+  <!-- Table Row 1 (Tour Booking) -->
+  <g transform="translate(30, 295)">
+    <rect width="1140" height="74" rx="10" fill="rgba(11,19,38,0.85)" stroke="rgba(255,255,255,0.06)"/>
+    <rect x="20" y="16" width="55" height="22" rx="4" fill="rgba(245,158,11,0.15)"/>
+    <text x="27" y="31" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="11" font-weight="900">#BK-8901</text>
+    <text x="85" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Executive Golden Triangle Tour</text>
+    <text x="20" y="55" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="11">4 Days / 3 Nights • Family Package</text>
+
+    <!-- Plate -->
+    <rect x="240" y="22" width="180" height="30" rx="6" fill="#091124" stroke="rgba(245,158,11,0.4)"/>
+    <text x="252" y="42" fill="#fbbf24" font-family="monospace" font-size="12" font-weight="800">🚗 DL-01-AB-1001 • Dzire</text>
+
+    <!-- Itinerary -->
+    <text x="440" y="36" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="700">New Delhi ➔ Agra ➔ Jaipur</text>
+    <text x="440" y="54" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11">GPS Route Verified • 680 KM Logged</text>
+
+    <!-- Driver -->
+    <text x="680" y="36" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Rohan Sharma</text>
+    <text x="680" y="54" fill="#10b981" font-family="system-ui, sans-serif" font-size="11">● Telemetry Live</text>
+
+    <!-- Fare & Balance -->
+    <text x="840" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="900" text-anchor="end">₹15,000</text>
+    <text x="980" y="34" fill="#34d399" font-family="system-ui, sans-serif" font-size="15" font-weight="950" text-anchor="end">₹9,500</text>
+    <text x="980" y="52" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="end">(-₹3,500 Fuel Netted)</text>
+
+    <!-- Status -->
+    <rect x="1025" y="24" width="90" height="26" rx="13" fill="rgba(16,185,129,0.2)"/>
+    <text x="1070" y="41" fill="#10b981" font-family="system-ui, sans-serif" font-size="11" font-weight="900" text-anchor="middle">ON ROUTE</text>
+  </g>
+
+  <!-- Table Row 2 (VIP Airport Transfer) -->
+  <g transform="translate(30, 380)">
+    <rect width="1140" height="74" rx="10" fill="rgba(11,19,38,0.85)" stroke="rgba(255,255,255,0.06)"/>
+    <rect x="20" y="16" width="55" height="22" rx="4" fill="rgba(56,189,248,0.15)"/>
+    <text x="27" y="31" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="900">#BK-9024</text>
+    <text x="85" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Airport VIP Corporate Transfer</text>
+    <text x="20" y="55" fill="rgba(255,255,255,0.5)" font-family="system-ui, sans-serif" font-size="11">Single Transfer • Terminal 3 Meet &amp; Greet</text>
+
+    <rect x="240" y="22" width="180" height="30" rx="6" fill="#091124" stroke="rgba(56,189,248,0.4)"/>
+    <text x="252" y="42" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="800">🚗 MH-02-CD-2020 • Crysta</text>
+
+    <text x="440" y="36" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Mumbai Airport ➔ Nariman Point</text>
+    <text x="440" y="54" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Fastag Highway Toll Auto-Billed (₹240)</text>
+
+    <text x="680" y="36" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Vikram Singh</text>
+    <text x="680" y="54" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11">● Terminal Assigned</text>
+
+    <text x="840" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="900" text-anchor="end">₹5,000</text>
+    <text x="980" y="34" fill="#34d399" font-family="system-ui, sans-serif" font-size="15" font-weight="950" text-anchor="end">₹1,500</text>
+    <text x="980" y="52" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="end">(Adv ₹3,500 Recd)</text>
+
+    <rect x="1025" y="24" width="90" height="26" rx="13" fill="rgba(56,189,248,0.2)"/>
+    <text x="1070" y="41" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="900" text-anchor="middle">DISPATCHED</text>
+  </g>
+
+  <!-- Table Row 3 (Partner Fleet Exchange) -->
+  <g transform="translate(30, 465)">
+    <rect width="1140" height="74" rx="10" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.35)"/>
+    <rect x="20" y="16" width="55" height="22" rx="4" fill="rgba(168,85,247,0.2)"/>
+    <text x="27" y="31" fill="#c084fc" font-family="system-ui, sans-serif" font-size="11" font-weight="900">#BK-9150</text>
+    <text x="85" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Inter-City Luxury MPV Tour</text>
+    <text x="20" y="55" fill="#c084fc" font-family="system-ui, sans-serif" font-size="11" font-weight="700">🤝 Partner Fleet: Metro Express Mobility</text>
+
+    <rect x="240" y="22" width="180" height="30" rx="6" fill="#1c1033" stroke="rgba(168,85,247,0.5)"/>
+    <text x="252" y="42" fill="#c084fc" font-family="monospace" font-size="12" font-weight="800">🚐 HR-26-GH-4040 • Innova</text>
+
+    <text x="440" y="36" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Bengaluru ➔ Coorg ➔ Mysore</text>
+    <text x="440" y="54" fill="#a855f7" font-family="system-ui, sans-serif" font-size="11">B2B Vendor Agreement Auto-Signed</text>
+
+    <text x="680" y="36" fill="#c084fc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Contracted Partner</text>
+    <text x="680" y="54" fill="#c084fc" font-family="system-ui, sans-serif" font-size="11">● Active Exchange</text>
+
+    <text x="840" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="900" text-anchor="end">₹22,000</text>
+    <text x="980" y="34" fill="#c084fc" font-family="system-ui, sans-serif" font-size="15" font-weight="950" text-anchor="end">+₹1,900</text>
+    <text x="980" y="52" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="end">(Margin Locked)</text>
+
+    <rect x="1015" y="24" width="110" height="26" rx="13" fill="rgba(168,85,247,0.25)"/>
+    <text x="1070" y="41" fill="#c084fc" font-family="system-ui, sans-serif" font-size="10" font-weight="900" text-anchor="middle">EXCHANGE ACTIVE</text>
+  </g>
+
+  <!-- Bottom Action Callout -->
+  <g transform="translate(30, 560)">
+    <rect width="1140" height="60" rx="10" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.25)"/>
+    <text x="25" y="35" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="800">
+      ⚡ AI Autonomous Reconciliation:
+    </text>
+    <text x="235" y="35" fill="rgba(255,255,255,0.85)" font-family="system-ui, sans-serif" font-size="13">
+      Guest fuel receipts, Fastag highway tolls, and driver advances are automatically audited against GPS telemetry.
+    </text>
+    <rect x="990" y="14" width="130" height="32" rx="6" fill="url(#goldGrad)"/>
+    <text x="1055" y="35" fill="#030611" font-family="system-ui, sans-serif" font-size="12" font-weight="900" text-anchor="middle">Book VIP Tour →</text>
+  </g>
+</svg>

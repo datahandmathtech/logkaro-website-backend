@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 760" width="100%" height="100%">
+  <defs>
+    <linearGradient id="phoneCase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="380" height="760" rx="44" fill="url(#phoneCase)" stroke="#334155" stroke-width="4"/>
+  <rect x="10" y="10" width="360" height="740" rx="36" fill="#0b141a"/>
+
+  <!-- Dynamic Island -->
+  <rect x="130" y="20" width="120" height="28" rx="14" fill="#000000"/>
+
+  <!-- WhatsApp Chat Header -->
+  <g transform="translate(10, 60)">
+    <rect width="360" height="60" fill="#202c33"/>
+    <circle cx="45" cy="30" r="18" fill="#128c7e"/>
+    <text x="36" y="36" fill="#ffffff" font-size="16">🚌</text>
+    <text x="75" y="26" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="800">LogKaro SafeTransit</text>
+    <circle cx="215" cy="22" r="6" fill="#25d366"/>
+    <text x="212" y="25" fill="#ffffff" font-size="8">✓</text>
+    <text x="75" y="44" fill="#25d366" font-family="system-ui, sans-serif" font-size="11">Official School Transit Telemetry</text>
+  </g>
+
+  <!-- Date Pill -->
+  <g transform="translate(140, 140)">
+    <rect width="100" height="24" rx="12" fill="#182229"/>
+    <text x="50" y="16" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">TODAY</text>
+  </g>
+
+  <!-- Message Bubble 1 (Morning Boarding) -->
+  <g transform="translate(25, 185)">
+    <rect width="330" height="240" rx="12" fill="#005c4b"/>
+    <path d="M-6,14 L0,8 L0,20 Z" fill="#005c4b"/>
+    
+    <text x="16" y="26" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="900">🎓 STUDENT BOARDED SAFELY</text>
+    
+    <text x="16" y="52" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Dear Parent,</text>
+    <text x="16" y="74" fill="rgba(255,255,255,0.9)" font-family="system-ui, sans-serif" font-size="12">Aarav has tapped RFID card &amp; boarded</text>
+    <text x="16" y="94" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="900">Bus #14 (DL-01-EA-4902)</text>
+    
+    <rect x="16" y="108" width="298" height="80" rx="8" fill="rgba(0,0,0,0.3)"/>
+    <text x="28" y="128" fill="rgba(255,255,255,0.7)" font-family="system-ui, sans-serif" font-size="11">● Boarding Stop: Sector 62 Park</text>
+    <text x="28" y="148" fill="rgba(255,255,255,0.7)" font-family="system-ui, sans-serif" font-size="11">● Boarding Time: 07:42 AM (On Schedule)</text>
+    <text x="28" y="168" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="800">● Bus Speed: 36 KM/H (Safe Speed Zone)</text>
+
+    <!-- Tap for Live Map CTA -->
+    <rect x="16" y="196" width="298" height="32" rx="6" fill="#25d366"/>
+    <text x="165" y="217" fill="#030611" font-family="system-ui, sans-serif" font-size="12" font-weight="900" text-anchor="middle">📍 Tap to Track Live Bus Location</text>
+    <text x="316" y="234" fill="rgba(255,255,255,0.5)" font-size="9" text-anchor="end">07:42 AM ✓✓</text>
+  </g>
+
+  <!-- Message Bubble 2 (Campus Gate Arrival) -->
+  <g transform="translate(25, 445)">
+    <rect width="330" height="150" rx="12" fill="#005c4b"/>
+    <text x="16" y="26" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="900">🏫 ARRIVED AT SCHOOL CAMPUS</text>
+    <text x="16" y="52" fill="rgba(255,255,255,0.9)" font-family="system-ui, sans-serif" font-size="12">Bus #14 has entered Campus Gate 2.</text>
+    
+    <rect x="16" y="65" width="298" height="50" rx="8" fill="rgba(0,0,0,0.3)"/>
+    <text x="28" y="85" fill="rgba(255,255,255,0.7)" font-family="system-ui, sans-serif" font-size="11">● Gate Entry: 08:12 AM</text>
+    <text x="28" y="102" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="800">● Status: Deboarded &amp; Inside Class</text>
+    <text x="316" y="144" fill="rgba(255,255,255,0.5)" font-size="9" text-anchor="end">08:13 AM ✓✓</text>
+  </g>
+
+  <!-- WhatsApp Bottom Bar -->
+  <g transform="translate(10, 680)">
+    <rect width="360" height="50" fill="#202c33"/>
+    <rect x="15" y="8" width="280" height="34" rx="17" fill="#2a3942"/>
+    <text x="35" y="30" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="13">Message LogKaro SafeTransit...</text>
+    <circle cx="325" cy="25" r="16" fill="#00a884"/>
+    <text x="318" y="30" fill="#ffffff" font-size="13">🎤</text>
+  </g>
+
+  <rect x="130" y="730" width="120" height="5" rx="2.5" fill="rgba(255,255,255,0.4)"/>
+</svg>
