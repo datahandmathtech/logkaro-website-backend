@@ -23,7 +23,8 @@ app.get('/api/health', (req, res) => {
 });
 
 // Single Page Application (SPA) fallback to index.html for all client-side routes
-app.get('*', (req, res) => {
+// Uses middleware without path string to remain 100% compatible with Express 4, Express 5 & path-to-regexp
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
