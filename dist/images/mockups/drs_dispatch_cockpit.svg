@@ -180,7 +180,7 @@
     <text x="25" y="35" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="800">
       ⚡ AI Autonomous Reconciliation:
     </text>
-    <text x="235" y="35" fill="rgba(255,255,255,0.85)" font-family="system-ui, sans-serif" font-size="13">
+    <text x="295" y="35" fill="rgba(255,255,255,0.85)" font-family="system-ui, sans-serif" font-size="13">
       Guest fuel receipts, Fastag highway tolls, and driver advances are automatically audited against GPS telemetry.
     </text>
     <rect x="990" y="14" width="130" height="32" rx="6" fill="url(#goldGrad)"/>

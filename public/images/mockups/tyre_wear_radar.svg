@@ -84,7 +84,7 @@
   <g transform="translate(30, 440)">
     <rect width="740" height="54" rx="8" fill="rgba(16,185,129,0.1)" stroke="rgba(16,185,129,0.35)"/>
     <text x="20" y="32" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="900">1-Click Workshop Settlement:</text>
-    <text x="240" y="32" fill="rgba(255,255,255,0.85)" font-family="system-ui, sans-serif" font-size="13">Bill #8921 (SpeedLine Tyres) • ₹4,500 settled via HDFC Corporate Bank</text>
+    <text x="240" y="32" fill="rgba(255,255,255,0.85)" font-family="system-ui, sans-serif" font-size="13">Bill #8921 • ₹4,500 settled via HDFC Bank</text>
     <rect x="630" y="12" width="95" height="30" rx="6" fill="#10b981"/>
     <text x="677" y="31" fill="#030611" font-family="system-ui, sans-serif" font-size="11" font-weight="900" text-anchor="middle">✓ SETTLED</text>
   </g>

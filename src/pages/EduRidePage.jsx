@@ -202,7 +202,7 @@ export default function EduRidePage({ onOpenDemo }) {
               transition={{ repeat: Infinity, duration: 3.8, ease: 'easeInOut' }}
               style={{
                 position: 'absolute',
-                top: '40px',
+                top: '-12px',
                 right: '-10px',
                 background: 'rgba(3,6,17,0.92)',
                 border: '1px solid rgba(56,189,248,0.5)',
